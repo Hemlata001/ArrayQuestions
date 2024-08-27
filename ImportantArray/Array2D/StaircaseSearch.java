@@ -2,7 +2,9 @@ package Array2D;
 import java.util.*;
 public class StaircaseSearch
 {
-    public static boolean staircaseSearch(int[][] matrix,int key){
+    // Case 1 = 40 -> (0,m-1)
+    // Case 2 = 32 -> (n-1,0)
+    public static boolean staircaseSearchCase1(int[][] matrix,int key){
         int row = 0;
         int col = matrix[0].length-1;
         while(row<matrix.length && col >= 0){
@@ -23,7 +25,7 @@ public class StaircaseSearch
         int[][] matrix = {{10,20,30,40},{15,25,35,45},{27,29,37,48},{32,33,39,50}};
         //int[][] result = staircaseSearch(matrix,33);
         //System.out.println(result);
-        System.out.println("Staircase Search : " + staircaseSearch(matrix,33));
+        System.out.println("Staircase Search : " + staircaseSearchCase1(matrix,33));
 }
 }
 // Time Complexity : O(n+m)
